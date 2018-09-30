@@ -10,8 +10,9 @@ return object;
 
 #foreach($method in $methods.keySet())
 
+  #set($withMethod = $method.replace("set","with"))
 
-public $builderClassName $method($methods[$method] value){
+public $builderClassName $withMethod($methods[$method] value){
 object.$method(value);
 return this;
 }
