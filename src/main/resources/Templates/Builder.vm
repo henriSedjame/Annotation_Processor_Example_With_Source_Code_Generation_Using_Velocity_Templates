@@ -1,0 +1,19 @@
+package $packageName;
+
+public class $builderClassName {
+
+private $className object = new $className();
+
+public $className build(){
+return object;
+}
+
+#foreach($method in $methods.keySet())
+
+
+public $builderClassName $method($methods[$method] value){
+object.$method(value);
+return this;
+}
+#end
+}
